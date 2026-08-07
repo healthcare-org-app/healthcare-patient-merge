@@ -1,0 +1,13 @@
+name: patient-merge-service
+port: 8108
+lang: python
+description: "patient-merge-service \u2014 domain: patients"
+http_deps:
+- patients-service
+- ehr-service
+- billing-service
+- audit-log-service
+publishes:
+- patient.merged
+- audit.event
+subscribes: []
